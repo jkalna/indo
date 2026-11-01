@@ -1,4 +1,4 @@
-const CACHE = "countdown-v8";
+const CACHE = "countdown-v9";
 const FILES = ["./", "index.html", "style.css", "script.js", "manifest.json", "icon-180.png", "background-v2.png","outfit-bold.ttf"];
 
 self.addEventListener("install", (e) => {
