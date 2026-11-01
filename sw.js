@@ -1,4 +1,4 @@
-const CACHE = "countdown-v6";
+const CACHE = "countdown-v7";
 const FILES = ["./", "index.html", "style.css", "script.js", "manifest.json", "icon-180.png", "background-v2.png","Outfit-Bold.ttf"];
 
 self.addEventListener("install", (e) => {
@@ -16,5 +16,13 @@ self.addEventListener("activate", (e) => {
 });
 
 self.addEventListener("fetch", (e) => {
-  e.respondWith(caches.match(e.request).then((r) => r || fetch(e.request)));
+  e.respondWith(
+    fetch(e.request)
+      .then((res) => {
+        const copy = res.clone();
+        caches.open(CACHE).then((c) => c.put(e.request, copy));
+        return res;
+      })
+      .catch(() => caches.match(e.request))
+  );
 });

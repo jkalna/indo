@@ -1,6 +1,6 @@
 // ---- Edit these two lines ----
 const EVENT_NAME = "Hey baby girl, it's only";
-const TARGET_DATE = new Date("2026-11-23T21:00:00"); // YYYY-MM-DDTHH:MM:SS, in her local time
+const TARGET_DATE = new Date("2026-11-23T22:00:00"); // YYYY-MM-DDTHH:MM:SS, in her local time
 // ------------------------------
 
 const pad = (n) => String(n).padStart(2, "0");
