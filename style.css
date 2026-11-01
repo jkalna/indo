@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("outfit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+:root {
+  --orange: #ec5f12;
+  --pink: #e5c6e6;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+html {
+  min-height: 100%;
+  background: var(--pink);
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  color: var(--orange);
+  font-family: "Outfit", ui-rounded, -apple-system, sans-serif;
+  font-weight: 700;
+  padding: calc(env(safe-area-inset-top) + 10vh) 1rem env(safe-area-inset-bottom);
+  background: url("background-v2.png") center / cover no-repeat, var(--pink);
+}
+
+h1 {  
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 1rem;
+}
+
+#countdown {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+}
+
+.unit span {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.unit small {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+#message {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+#footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(env(safe-area-inset-bottom) + 1.5rem);
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
